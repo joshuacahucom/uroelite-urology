@@ -87,7 +87,7 @@
     btn.setAttribute('aria-expanded', 'true');
   }
   function toggleAcc(btn) {
-    var item = btn.closest('h3').parentElement;
+    var item = btn.closest('h2,h3,h4,h5,h6').parentElement;
     if (btn.getAttribute('aria-expanded') === 'true') return closeItem(item);
     Array.prototype.forEach.call(item.parentElement.children, function (sib) {
       if (sib !== item && sib.getAttribute('data-state') === 'open') closeItem(sib);
